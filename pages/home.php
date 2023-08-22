@@ -52,7 +52,7 @@
                 <div class="container">
                     <div class="row p-5">
                         <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="../assets/img/sliderimg1.png" alt="">
+                            <img class="img-fluid" src="../assets/img/sliderimg1-r.png" alt="">
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left align-self-center">
@@ -75,7 +75,7 @@
                 <div class="container">
                     <div class="row p-5">
                         <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="../assets/img/sliderimg2.png" alt="" style=" height: 380px; margin : 50px  0px 80px  100px;  ">
+                            <img class="img-fluid" src="../assets/img/samaung_5-1-r.png" alt="" style=" height: 380px; margin : 50px  0px 80px  100px;  ">
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left">
@@ -97,7 +97,7 @@
                 <div class="container">
                     <div class="row p-5">
                         <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="../assets/img/s3.png" alt="" style=" height: 380px; margin : 50px  0px 80px  100px;  ">
+                            <img class="img-fluid" src="../assets/img/samaung_5-1-r.png" alt="" style=" height: 380px; margin : 50px  0px 80px  100px;  ">
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left">
@@ -147,10 +147,10 @@
             </div>
 
         </div>
-        <div class="row mx-1 justify-content-center">
+        <div class="row mx-1 justify-content-center ">
             <?php while ($category = $categories_result->fetch(PDO::FETCH_ASSOC)) { ?>
                 <div class="col-12 col-md-4 p-5 mt-3 ">
-                    <a href="pages\shop.php"><img src="../admin_pages/uploads/<?php echo $category['picture'] ?>" class="img-fluid border" style="height:400px"></a>
+                    <a href="shop.php?category_id=<?php print_r($category['id']) ?>"><img src="../admin_pages/uploads/<?php echo $category['picture'] ?>" class="img-fluid border" style="height:400px"></a>
                     <h5 class="text-center mt-3 mb-3">
                         <?php echo $category['name']; ?>
                     </h5>
@@ -203,7 +203,7 @@
                         </div>
                         <div class="row mr-4">
 
-                           
+
 
                             <?php foreach ($phoneProducts as $product) : ?>
                                 <?php if ($product['price'] > 500 && $category['id'] == $product['category_id']) { ?>
